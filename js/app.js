@@ -13,6 +13,7 @@
 // This file bootstraps the entire application.
 
 var ChatApp = require('./components/ChatApp.react');
+var SocialIcon = require('./components/Social.icon.react');
 var ChatExampleData = require('./ChatExampleData');
 var ChatWebAPIUtils = require('./utils/ChatWebAPIUtils');
 var React = require('react');
@@ -22,7 +23,13 @@ ChatExampleData.init(); // load example data into localstorage
 
 ChatWebAPIUtils.getAllMessages();
 
+// React.render(
+//     <ChatApp />,
+//     document.getElementById('react')
+// );
+
+//render social-icon
 React.render(
-    <ChatApp />,
-    document.getElementById('react')
+    <SocialIcon />,
+    document.getElementById('social-icon')
 );
